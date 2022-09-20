@@ -41,4 +41,13 @@ const showItemsOnHomePage = () => {
   bindEventListenToUpdateButton(items);
 };
 
+const bindEventListenToResetButton = () => {
+  const resetButton = document.getElementById('reset-items-button');
+  resetButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    showItemsOnHomePage();
+  });
+};
+
 showItemsOnHomePage();
+bindEventListenToResetButton();
